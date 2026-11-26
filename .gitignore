@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+# .env.production holds public IDs only, never secrets
+!.env.production
+*.tsbuildinfo
+next-env.d.ts

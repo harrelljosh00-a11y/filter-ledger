@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Filter Ledger logo">
+  <defs><clipPath id="d"><path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4z"/></clipPath></defs>
+  <path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4z" fill="#E8F3FA" stroke="#1F6FB2" stroke-width="3"/>
+  <g clip-path="url(#d)" stroke="#1F6FB2" stroke-width="2" opacity=".7">
+    <line x1="10" y1="30" x2="54" y2="30"/><line x1="10" y1="38" x2="54" y2="38"/>
+    <line x1="10" y1="46" x2="54" y2="46"/><line x1="10" y1="54" x2="54" y2="54"/>
+  </g>
+  <path d="M24 42l6 6 11-13" fill="none" stroke="#1E8A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

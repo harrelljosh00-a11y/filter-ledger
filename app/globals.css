@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-ink: #0F2A3D;
+  --color-ledger: #1F6FB2;
+  --color-clear: #E8F3FA;
+  --color-green-ledger: #1E8A5A;
+  --color-amber-ledger: #B7791F;
+  --color-red-ledger: #B42318;
+  --color-paper: #FAFAF7;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { -webkit-tap-highlight-color: rgba(31,111,178,.15); }
+input, select, textarea { font-size: 16px; } /* prevents iOS Safari zoom on focus */
+.prose table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+body { font-family: var(--font-sans); }
+h1, h2, h3 { font-family: var(--font-serif); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-ledger); outline-offset: 2px; }
+
+.badge { display: inline-block; color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .04em; padding: .15rem .5rem; border-radius: 999px; }
+.product-card { border: 1px solid #d6e2ea; border-radius: .75rem; padding: 1rem 1.25rem; margin: 1.5rem 0; background: #fff; }
+.product-card table { width: 100%; font-size: .9rem; }
+.product-card .meta { font-size: .85rem; color: #4a5d6b; }
+.cta { display: inline-flex; align-items: center; min-height: 44px; background: var(--color-ledger); color: #fff !important; text-decoration: none !important; padding: .55rem 1rem; border-radius: .5rem; font-weight: 600; }
+.note { background: var(--color-clear); padding: .75rem 1rem; border-radius: .5rem; }
