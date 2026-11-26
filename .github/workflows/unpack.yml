@@ -1,0 +1,22 @@
+name: Unpack uploaded source
+# One-time helper: when source.zip is uploaded through the GitHub web UI,
+# unzip it into the repo, delete the zip, and commit. Safe to delete afterwards.
+on:
+  push:
+    paths: [source.zip]
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip and commit
+        run: |
+          unzip -o source.zip -x '.github/*'
+          git rm -q source.zip
+          git config user.name "filter-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack site source from source.zip"
+          git push

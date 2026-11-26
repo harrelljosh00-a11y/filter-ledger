@@ -1,0 +1,21 @@
+name: Weekly checks
+on:
+  schedule: [{ cron: "17 14 * * 1" }]   # Mondays 14:17 UTC
+  workflow_dispatch:
+permissions: { contents: read, issues: write }
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - id: links
+        run: node scripts/check-links.mjs > links.txt 2>&1 || echo "fail=1" >> $GITHUB_OUTPUT
+      - id: stale
+        run: node scripts/check-stale.mjs > stale.txt 2>&1 || echo "fail=1" >> $GITHUB_OUTPUT
+      - if: steps.links.outputs.fail == '1' || steps.stale.outputs.fail == '1'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          { echo "## Broken links"; cat links.txt; echo; echo "## Stale verification"; cat stale.txt; } > body.md
+          gh issue create --title "Weekly check failed $(date +%F)" --body-file body.md --label alert || gh issue create --title "Weekly check failed $(date +%F)" --body-file body.md
