@@ -25,7 +25,7 @@ export const viewport: Viewport = {
   themeColor: "#0F2A3D",
 };
 
-const nav = [["Guides", "/guides/"], ["Best Picks", "/best/"], ["Comparisons", "/vs/"], ["How we review", "/how-we-review/"]];
+const nav = [["Guides", "/guides/"], ["Best Picks", "/best/"], ["Compare", "/vs/"], ["Our method", "/how-we-review/"]];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span>© {new Date().getFullYear()} Filter Ledger</span>
             <Link href="/about/">About</Link><Link href="/disclosure/">Affiliate disclosure</Link>
             <Link href="/privacy/">Privacy</Link><Link href="/terms/">Terms</Link><Link href="/contact/">Contact</Link>
-            <span className="w-full">Information only, not medical advice. Wren is an AI-generated host.</span>
+            <span className="w-full">Information only, not medical advice. <Link href="/about/" className="underline">How our content is made</Link>.</span>
           </div>
         </footer>
         {ga && (<>

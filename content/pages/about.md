@@ -17,6 +17,8 @@ Filter Ledger is an independent buying guide for home water filters. Our job is 
 - We don't give medical advice. For health questions about your water, talk to your utility, your local health department or a doctor.
 
 ## Meet Wren
+<img src="/brand/wren-photo-headshot.jpg" alt="Wren, an AI-generated illustrated host" width="240" height="240" style="border-radius:1rem" />
+
 **Wren is an AI-generated host**, a fictional character who presents our videos. She isn't a real person, customer or product tester. Her scripts come from our published, sourced pages.
 
 ## How we make money

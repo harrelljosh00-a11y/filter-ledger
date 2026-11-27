@@ -20,3 +20,13 @@
 - S-1: Write the 9 remaining Month 1 pages.
 
 **Costs to date:** $0.
+
+## 2026-11-26: Session 2 (via Claude in Chrome)
+- USPTO search: no "Filter Ledger" marks. Many unrelated "LEDGER" marks (crypto wallets, accounting software, restaurants), none for water filters. Not legal clearance.
+- GitHub repo created: github.com/harrelljosh00-a11y/filter-ledger (public). Code uploaded as a zip and unpacked by the one-time `unpack.yml` workflow. Wren images committed to public/brand.
+- Cloudflare Pages project `filter-ledger` (direct upload): live at https://filter-ledger-dh7.pages.dev
+- GA4 account "Filter Ledger" + web stream; Google tag GTM-NJN5FM5F wired in. Search Console URL-prefix property verified via meta tag; sitemap.xml submitted.
+- iPhone fixes: safe-area insets, 44px tap targets, apple-touch-icon, web manifest, scrollable tables, 16px inputs, shorter nav labels.
+- Wren image set generated in Gemini (headshot, presenting 9:16, thumbs-up, skeptical, cover 16:9). Gemini terms: Google doesn't claim ownership of outputs. Sources disagree on commercial use for the free tier, so confirm in Google's own terms before running ads.
+- Pending re-deploy: the build with Wren on the site was made after Chrome disconnected (site.zip / source.zip ready to upload).
+- Affiliate applications held: the site has 1 article and 0 verified products, so applying now risks rejection (Amazon reviews within 180 days; others review content). Apply after ~10 pages.

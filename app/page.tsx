@@ -11,7 +11,8 @@ export default function Home() {
   const latest = allDocs().slice(0, 6);
   return (
     <div className="space-y-12">
-      <section className="rounded-2xl bg-clear p-8">
+      <section className="rounded-2xl bg-clear p-6 sm:p-8 grid gap-6 sm:grid-cols-[1fr_220px] items-center">
+        <div>
         <p className="text-sm font-semibold uppercase tracking-wide text-ledger">Every claim, checked</p>
         <h1 className="font-serif text-4xl font-semibold mt-2 max-w-2xl">Water filter advice that shows its receipts.</h1>
         <p className="mt-4 max-w-2xl text-lg">
@@ -23,6 +24,11 @@ export default function Home() {
           <Link href="/guides/nsf-standards-explained/" className="cta">Start here: NSF standards explained</Link>
           <Link href="/how-we-review/" className="underline self-center">How we review (and what we don&apos;t do)</Link>
         </div>
+        </div>
+        <figure className="order-first sm:order-none mx-auto w-40 sm:w-full">
+          <img src="/brand/wren-photo-headshot.jpg" alt="Wren from Filter Ledger" width={1200} height={1200} className="rounded-2xl" loading="eager" />
+          <figcaption className="text-xs text-slate-600 mt-2 text-center">Hi, I&apos;m Wren. Every claim, checked.</figcaption>
+        </figure>
       </section>
       <section aria-labelledby="how">
         <h2 id="how" className="font-serif text-2xl font-semibold mb-4">Choosing a filter in three steps</h2>
